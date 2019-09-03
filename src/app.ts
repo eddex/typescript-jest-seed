@@ -1,3 +1,14 @@
+interface Settings {
+  settingA: number;
+  settingB: number;
+}
+
+interface User {
+  id: number;
+  name: string;
+  settings: Settings;
+}
+
 class App {
 
   // missing interface. Read exercise below:
@@ -15,6 +26,3 @@ class App {
 
 let user = new App().createUser('Andreas');
 console.log(user);
-
-
-
