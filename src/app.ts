@@ -1,19 +1,6 @@
-class App {
-
-  createUser(name: string): User {
-    return {
-      id: 123,
-      name: name,
-      settings: {
-        settingA: 123,
-        settingB: 456,
-      }
-    }
-  }
+interface KeyPair<TKey, TValue> {
+  key: TKey; value: TValue;
 }
-
-let user = new App().createUser('Andreas');
-console.log(user);
-
-
-
+let kv1: KeyPair<string, string> = { key:"key", value:"value" };
+let kv2: KeyPair<number, string> = { key:1, value:"Steve" };
+let kv3: KeyPair<number, number> = { key:1, value:12345 };
